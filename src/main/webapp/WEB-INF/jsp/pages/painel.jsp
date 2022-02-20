@@ -206,7 +206,7 @@
 		}
 		
 		function chamarSom(){
-			//APITAR
+			//APITAR - Obs: deve manter uma tecla pressionada constantemente na tela: https://hb-senhas.herokuapp.com/painel porque o som só é chamado com interação do Uusuario no Javascript.
 			document.getElementById('myAudio').innerHTML = '<source src="/som/beep.mp3" type="audio/mpeg">';
 			if( apitar && (codigoAnterior != codigoAtual || primeiraChamada == 0) ){
 				primeiraChamada = 1;
