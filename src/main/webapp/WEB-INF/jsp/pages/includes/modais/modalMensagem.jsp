@@ -17,10 +17,10 @@ function modalMensagem(msg){
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content text-center">
       <div class="modal-header">
-        <h5 class="modal-title" style="color:white" id="TituloModalCentralizado">PAINEL OCUPADO</h5>
+        <h5 class="modal-title" style="color:dark" id="TituloModalCentralizado">ATENÇÃO</h5>
       </div>
       <div class="modal-body">
-        <span style="color:white" id="mensagemModal"></span>
+        <span style="color:dark" id="mensagemModal"></span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
