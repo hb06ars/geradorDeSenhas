@@ -202,11 +202,11 @@
 		// AJAX ------------------------------------------------------------------------------------
 		function apitar_maquina(){
 			apitar = true;
-			document.addEventListener("keydown", chamarSom);
+			document.addEventListener("keypress", chamarSom);
 		}
 		
 		function chamarSom(){
-			//APITAR - Obs: deve manter uma tecla pressionada constantemente na tela: https://hb-senhas.herokuapp.com/painel porque o som só é chamado com interação do Uusuario no Javascript.
+			// APITAR - Obs: deve manter uma tecla pressionada constantemente na tela: https://hb-senhas.herokuapp.com/painel porque o som só é chamado com interação do Uusuario no Javascript.
 			document.getElementById('myAudio').innerHTML = '<source src="/som/beep.mp3" type="audio/mpeg">';
 			if( apitar && (codigoAnterior != codigoAtual || primeiraChamada == 0) ){
 				primeiraChamada = 1;
