@@ -41,11 +41,13 @@ function finalizar(){
 	var codigo = document.getElementById('codigo_atendendo').innerHTML;
 	getLiberarPainel(codigo)
 	atualizar();
-	document.getElementById('livre').style.display = 'block';
-	document.getElementById('atendendo').style.display = 'none';
-	document.getElementById('msg').innerHTML = 'Aguarde o cliente chegar para clicar em atender.';
-	document.getElementById('bt_atender').innerHTML = '<input type="button" onclick="liberarPainel()" class="btn btn-success" value="ATENDER" />';
-	
+	//document.getElementById('livre').style.display = 'block';
+	//document.getElementById('atendendo').style.display = 'none';
+	//document.getElementById('msg').innerHTML = 'Aguarde o cliente chegar para clicar em atender.';
+	//document.getElementById('bt_atender').innerHTML = '<input type="button" onclick="liberarPainel()" class="btn btn-success" value="ATENDER" />';
+	document.getElementById('msg').innerHTML = 'Finalizando, aguarde...';
+	document.getElementById('msgAtender').innerHTML = "<span class='fa fa-spinner fa-spin fa-2x'></span>";
+	window.location.href="/home";	
 }
 function inicial(){
 	tickets = [];
@@ -306,9 +308,12 @@ function json_AtualizarTela(json) {
                         			<input type="button" onclick="liberarPainel()" class="btn btn-success" value="ATENDER" />
                         		</span>
                         		<br><br><br>
-                        		Para pular para o próximo cliente ou finalizar o atendimento, clique no botão abaixo:</span>
-								<br><br><br>
-								<input type="button" onclick="finalizar()" class="btn btn-danger" value="FINALIZAR ATENDIMENTO" />
+                        		<span id="msgAtender">
+	                        		Para pular para o próximo cliente ou finalizar o atendimento, clique no botão abaixo:
+									<br><br><br>
+									<input type="button" onclick="finalizar()" class="btn btn-danger" value="FINALIZAR ATENDIMENTO" />
+								</span>
+								</span>
 	                        </div>
 	                    
 	                    </div>
